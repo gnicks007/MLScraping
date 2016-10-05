@@ -40,10 +40,20 @@ def main():
     print(chowder.prettify())
     
     links = chowder.find_all('a')
+    numLinks = len(links)    
+    
     for link in links:
         print(link.get('href'))
     
-    print(chowder.get_text())
+    """print(chowder.get_text())"""
+    
+    tables = chowder.find_all('table')
+    print(len(links))
+    
+    scripts = chowder.find_all('script')
+    divs = chowder.find_all('div')
+    
+    print(len(scripts), len(divs))
     
 main()
 
