@@ -39,8 +39,9 @@ def main():
     chowder = BeautifulSoup(data, 'html.parser')
     print(chowder.prettify())
     
-    for links in chowder.find_all('a'):
-        print(links.get('href'))
+    links = chowder.find_all('a')
+    for link in links:
+        print(link.get('href'))
     
     print(chowder.get_text())
     
